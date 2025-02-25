@@ -1,0 +1,19 @@
+def fibonacci(n):
+    # Handle edge cases for the first and second Fibonacci numbers
+    if n == 1 or n == 2:
+        return 1
+    
+    # Initialize the first two Fibonacci numbers
+    a, b = 1, 1
+    
+    # Calculate the Fibonacci sequence up to the N-th number
+    for _ in range(3, n + 1):
+        a, b = b, a + b
+    
+    return b
+
+# Input the value of n
+n = int(input())
+
+# Output the N-th Fibonacci number
+print(fibonacci(n))
